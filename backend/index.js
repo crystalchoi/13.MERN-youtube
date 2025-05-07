@@ -1,10 +1,12 @@
 import express from 'express';
 import {MongoDB_URL, PORT} from './config.js'
 import mongoose from "mongoose";
+import cors from "cors";
 
 const app = express();
 
 app.use(express.json())
+app.use(cors())
 
 app.get('/', (req, res) => {
 	// console.log(req.query);
